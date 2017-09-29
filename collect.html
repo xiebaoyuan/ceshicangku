@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="icon/iconfont.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/green.css" rel="stylesheet">
+    <script src="js/base.js"></script>
+    <title></title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="navhader">
+            <a class="fl dcnav" href="javscript:;"><span>取消</span></a>
+            <a id="accomplish" class="fr dcnav disable" href="index.html"><span>完成</span></a>
+            <h1 class="dctitle">我的收藏</h1>
+        </div>
+    </header>
+    <section class="main mtop">
+        <div class="topfun">创建收藏夹</div>
+        <ul class="collectlist">
+            <li>
+                <input type="checkbox" name="iCheck1">
+                <p>语文</p>
+                <span>2个内容</span>
+            </li>
+            <li>
+                <input type="checkbox" name="iCheck2">
+                <p>语文</p>
+                <span>2个内容</span>
+            </li>
+            <li>
+                <input type="checkbox" name="iCheck3">
+                <p>语文</p>
+                <span>2个内容</span>
+            </li>
+            <li>
+                <input type="checkbox" name="iCheck4">
+                <p>语文<i class="icon iconfont icon-mima"></i></p>
+                <span>2个内容</span>
+            </li>
+            <li>
+                <input type="checkbox" name="iCheck5">
+                <p>语文</p>
+                <span>2个内容</span>
+            </li>
+            <li>
+                <input type="checkbox" name="iCheck6">
+                <p>语文</p>
+                <span>2个内容</span>
+            </li>
+        </ul>
+    </section>
+    <script>
+        $(function() {
+            // 选择框初始化
+            $('input').iCheck({
+                checkboxClass: 'iradio_square-green',
+                increaseArea: '20%' // optional
+            });
+
+            // 选择收藏夹事件
+            $(".collectlist li").click(function() {
+                $(this).find("ins").trigger('click');
+                if ($(".collectlist li input:checked").length > 0) {
+                    $("#accomplish").removeClass("disable");
+                } else {
+                    $("#accomplish").addClass("disable");
+                }
+            });
+
+        })
+    </script>
+</body>
+
+</html>

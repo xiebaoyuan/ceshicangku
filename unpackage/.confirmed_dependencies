@@ -1,0 +1,43 @@
+{
+	"index.html": {
+		"resources": [
+			"css/style.css",
+			"icon/iconfont.woff",
+			"item/item1.jpg",
+			"icon/iconfont.css",
+			"js/base.js",
+			"dataranIlmu.html",
+			"group.html"
+		],
+		"refer": [
+			"dataranIlmu.html",
+			"group.html"
+		]
+	},
+	"me.html": {
+		"resources": [
+			"/img/userbg.png",
+			"group.html"
+		],
+		"refer": [
+			"group.html"
+		]
+	},
+	"dataranIlmu.html": {
+		"resources": [
+			"me.html",
+			"item/big_buck_bunny.mp4"
+		],
+		"refer": [
+			"me.html"
+		]
+	},
+	"group.html": {
+		"resources": [
+			"index.html"
+		],
+		"refer": [
+			"index.html"
+		]
+	}
+}
